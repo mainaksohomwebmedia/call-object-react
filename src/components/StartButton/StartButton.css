@@ -5,7 +5,7 @@
   font-family: Helvetica Neue;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 24px;
   border-radius: 22px;
   line-height: 17px;
   text-align: center;
@@ -13,5 +13,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgb(53, 241, 232);
+  background-color: rgb(100, 9, 62);
+}
+.container .btn:hover {
+  background-color: rgb(245, 231, 231);
+  color: rgb(56, 4, 4);
 }
