@@ -213,11 +213,11 @@ export default function App() {
         // that want to access call object state and bind event listeners to the
         // call object, this can be a helpful pattern.
         <CallObjectContext.Provider value={callObject}>
-          <Call roomUrl={roomUrl} />
-          {/* <Tray
+          {/* <Call roomUrl={roomUrl} /> */}
+          <Tray
             disabled={!enableCallButtons}
             onClickLeaveCall={startLeavingCall}
-          /> */}
+          />
         </CallObjectContext.Provider>
       ) : (
         <StartButton
