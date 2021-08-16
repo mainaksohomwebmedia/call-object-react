@@ -23,5 +23,4 @@
     /* Video height + 10px padding either side */
     display: flex;
     align-items: center;
-    border-radius: 50% !important;
 }
