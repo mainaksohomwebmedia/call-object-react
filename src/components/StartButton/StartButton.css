@@ -6,6 +6,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
+  border-radius: 22px;
   line-height: 17px;
   text-align: center;
   color: indigo;
@@ -13,8 +14,4 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: blueviolet;
-}
-.start-button:hover {
-  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
-  animation:slidebg 2s linear infinite;
 }
