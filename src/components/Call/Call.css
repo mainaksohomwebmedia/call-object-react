@@ -16,7 +16,8 @@
 }
 
 .small-tiles {
-  height: 192.5px; /* Video height + 10px padding either side */
+  height: 132.5px; /* Video height + 10px padding either side */
   display: flex;
   align-items: center;
+  border-radius: 50%;
 }
