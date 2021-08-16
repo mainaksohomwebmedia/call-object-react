@@ -15,7 +15,7 @@
   transform: translate(-50%, -50%);
   background-color: rgb(100, 9, 62);
 }
-.container .btn:hover {
+.start-button:hover {
   background-color: rgb(245, 231, 231);
   color: rgb(56, 4, 4);
 }
