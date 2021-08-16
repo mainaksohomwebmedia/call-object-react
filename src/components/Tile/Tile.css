@@ -2,7 +2,6 @@
     width: 200px;
     margin: 0 10px;
     position: relative;
-    border-radius: 50% !important;
 }
 
 .tile.large {
@@ -32,7 +31,7 @@
 }
 
 .tile.small .background {
-    border-radius: 4px;
+    border-radius: 50px;
 }
 
 .tile .overlay {
