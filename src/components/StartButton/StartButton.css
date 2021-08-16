@@ -8,10 +8,13 @@
   font-size: 14px;
   line-height: 17px;
   text-align: center;
-  color: #4a4a4a;
+  color: indigo;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+  background-color: blueviolet;
+}
+.start-button:hover {
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
   animation:slidebg 2s linear infinite;
 }
