@@ -214,10 +214,10 @@ export default function App() {
         // call object, this can be a helpful pattern.
         <CallObjectContext.Provider value={callObject}>
           <Call roomUrl={roomUrl} />
-          <Tray
+          {/* <Tray
             disabled={!enableCallButtons}
             onClickLeaveCall={startLeavingCall}
-          />
+          /> */}
         </CallObjectContext.Provider>
       ) : (
         <StartButton
