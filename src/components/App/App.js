@@ -224,7 +224,7 @@ export default function App() {
           disabled={!enableStartButton}
           onClick={() => {
             // createCall().then((url) => startJoiningCall(url));
-            startJoiningCall('https://competent-sinoussi-b7398a.netlify.app/?room=0QHOCQuLeXfnjvP6WiUd');
+            startJoiningCall('https://competent-sinoussi-b7398a.netlify.app/?roomUrl=https%3A%2F%2Fcompetent-sinoussi-b7398a.netlify.app%2F%3FroomUrl%3Dhttps%253A%252F%252Fgovirtual.daily.co%252F1JzKGLQDIKeQBoPnQzDD');
           }}
         />
       )}
