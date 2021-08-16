@@ -1,7 +1,6 @@
 .tray {
   flex: none;
   height: 60px;
-  right: 50%;
   background-color: #f2f2f2;
   padding: 0 10px;
   display: flex;
