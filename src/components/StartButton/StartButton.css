@@ -9,9 +9,9 @@
   border-radius: 22px;
   line-height: 17px;
   text-align: center;
-  color: indigo;
+  color: rgb(249, 244, 253);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: blueviolet;
+  background-color: rgb(53, 241, 232);
 }
