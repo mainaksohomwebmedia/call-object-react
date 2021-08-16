@@ -3,7 +3,7 @@
   height: 44px;
   border: none;
   background-color: transparent;
-  margin: 0 5px;
+  margin: 0 55px;
 }
 
 .tray-button:disabled {
@@ -16,5 +16,5 @@
 
 /* Acts as the first button in a new "group" of buttons separated from those to the left of it */
 .tray-button.new-group {
-  margin-left: 50%;
+  margin-left: auto;
 }
