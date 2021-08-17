@@ -13,6 +13,7 @@
 .tile video {
     width: 100%;
     position: absolute;
+    border-radius: 75%;
     top: 0px;
 }
 
