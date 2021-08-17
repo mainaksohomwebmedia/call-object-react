@@ -7,13 +7,14 @@
 
 .large-tiles {
     height: calc(100% - 132.5px);
-    width: 10%;
+    width: 30%;
     position: relative;
     left: 50%;
     transform: translate(-50%, 0);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     align-items: center;
+    border-radius: 75%;
     /* overflow-y: scroll; */
 }
 
@@ -23,4 +24,5 @@
     /* Video height + 10px padding either side */
     display: flex;
     align-items: center;
+    border-radius: 75%;
 }
