@@ -1,7 +1,6 @@
 .tile.small {
     width: 200px;
     margin: 0 10px;
-    border-radius: 100px;
     position: relative;
 }
 
@@ -11,9 +10,8 @@
 }
 
 .tile video {
-    width: 10%;
+    width: 100%;
     position: absolute;
-    border-radius: 75%;
     top: 0px;
 }
 
@@ -29,19 +27,11 @@
 }
 
 .tile.small video {
-    border-radius: 75%;
+    border-radius: 600px;
 }
 
 .tile.small .background {
-    border-radius: 75%;
-}
-
-.tile.large video {
-    border-radius: 75%;
-}
-
-.tile.large .background {
-    border-radius: 75%;
+    border-radius: 60px;
 }
 
 .tile .overlay {
