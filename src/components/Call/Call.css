@@ -6,7 +6,7 @@
 }
 
 .large-tiles {
-    height: calc(100% - 132.5px);
+    height: calc(100% - 150px);
     width: 10%;
     position: relative;
     left: 50%;
