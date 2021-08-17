@@ -1,6 +1,7 @@
 .tile.small {
     width: 200px;
     margin: 0 10px;
+    border-radius: 100px;
     position: relative;
 }
 
