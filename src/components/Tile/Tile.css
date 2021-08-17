@@ -28,19 +28,19 @@
 }
 
 .tile.small video {
-    border-radius: 50%;
+    border-radius: 75%;
 }
 
 .tile.small .background {
-    border-radius: 50%;
+    border-radius: 75%;
 }
 
 .tile.large video {
-    border-radius: 50%;
+    border-radius: 75%;
 }
 
 .tile.large .background {
-    border-radius: 50%;
+    border-radius: 75%;
 }
 
 .tile .overlay {
