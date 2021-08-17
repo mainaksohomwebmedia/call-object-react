@@ -35,6 +35,14 @@
     border-radius: 100px;
 }
 
+.tile.small video {
+    border-radius: 100px;
+}
+
+.tile.small .background {
+    border-radius: 100px;
+}
+
 .tile .overlay {
     position: absolute;
     color: #ffffff;
