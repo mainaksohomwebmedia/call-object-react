@@ -21,7 +21,7 @@
     width: 150px;
     height: 150px;
     top: 30%;
-    left: 1000px;
+    right: 1000px;
     /* Video height + 10px padding either side */
     display: flex;
     align-items: center;
