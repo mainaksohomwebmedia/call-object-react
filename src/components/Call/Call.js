@@ -161,7 +161,7 @@ export default function Call() {
         return [largeTiles, smallTiles];
     }
     /*componentWillMount(){
-      window.dragElement(document.getElementById("mydiv"));
+      window.dragElement(document.getElementById(""));
     }*/
     const [largeTiles, smallTiles] = getTiles();
     const message = getMessage(callState);
@@ -169,7 +169,7 @@ export default function Call() {
         <div className = "large-tiles" > {!message ?
             largeTiles :
                 null /* Avoid showing large tiles to make room for the message */
-        } </div> <div className = "small-tiles" onClick={window['myFunction']} > { smallTiles } </div> {
+        } </div> <div className = "small-tiles" id="mydiv" onClick={window['myFunction']} > { smallTiles } </div> {
             message && ( <
                 CallMessage header = { message.header }
                 detail = { message.detail }
