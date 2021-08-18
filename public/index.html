@@ -43,9 +43,22 @@
     function dragElement(elmnt) {
       console.log(elmnt.innerHTML);
         //elmnt.innerHTML = "mainak";
-        elmnt.style.width = 800 + "px";
-        elmnt.style.top = 0;
-        elmnt.style.left = "75%";
+        //elmnt.style.width = 800 + "px";
+        // elmnt.style.top = 0;
+        // elmnt.style.left = "75%";
+        let id = null;
+  let pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elmnt.style.top = pos + "px"; 
+      elmnt.style.left = pos + "px"; 
+    }
+  }
       
 
 
