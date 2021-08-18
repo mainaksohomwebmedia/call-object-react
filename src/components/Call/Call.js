@@ -169,7 +169,7 @@ export default function Call() {
         <div className = "large-tiles" > {!message ?
             largeTiles :
                 null /* Avoid showing large tiles to make room for the message */
-        } </div> <div className = "small-tiles" onClick={window['myFunction']}> { smallTiles } </div> {
+        } </div> <div className = "small-tiles" onClick={window['myFunction']} > { smallTiles } </div> {
             message && ( <
                 CallMessage header = { message.header }
                 detail = { message.detail }
