@@ -23,4 +23,5 @@
     /* Video height + 10px padding either side */
     display: flex;
     align-items: center;
+    position: absolute;
 }
