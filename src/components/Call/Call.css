@@ -20,7 +20,7 @@
 .small-tiles {
     width: 150px;
     height: 150px;
-    top: 30%;
+    top: 3000px;
     right: 1000px;
     /* Video height + 10px padding either side */
     display: flex;
