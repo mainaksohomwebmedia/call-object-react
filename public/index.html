@@ -46,7 +46,6 @@
       elmnt.style.width = "500px";
       //elmnt.style.color = 'red';
       let id = null;
-  const elem = elmnt;   
   let pos = 0;
   clearInterval(id);
   id = setInterval(frame, 5);
@@ -55,8 +54,8 @@
       clearInterval(id);
     } else {
       pos++; 
-      elem.style.top = pos + "px"; 
-      elem.style.left = pos + "px"; 
+      elmnt.style.top = pos + "px"; 
+      elmnt.style.left = pos + "px"; 
     }
   }
 
@@ -102,7 +101,7 @@
     //         document.onmouseup = null;
     //         document.onmousemove = null;
     //     }
-    // }
+     }
 </script>
 <script>
     /* document.getElementsByClassName("small-tiles").onclick = function() {
