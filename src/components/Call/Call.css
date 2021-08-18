@@ -20,8 +20,7 @@
 .small-tiles {
     width: 150px;
     height: 150px;
-    top: 1000px;
     /* Video height + 10px padding either side */
-    /* display: flex; */
-    /* align-items: center; */
+    display: flex;
+    align-items: center;
 }
