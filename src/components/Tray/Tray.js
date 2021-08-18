@@ -3,6 +3,7 @@ import './Tray.css';
 import TrayButton, {
   TYPE_MUTE_CAMERA,
   TYPE_MUTE_MIC,
+  TYPE_SHARE_SCREEN,
   TYPE_SCREEN,
   TYPE_LEAVE,
   TYPE_CHAT,
@@ -31,7 +32,8 @@ function getStreamStates(callObject) {
     isMicMuted = !localParticipant.audio;
     isSharingScreen = localParticipant.screen;
   }
-  return [isCameraMuted, isMicMuted, isSharingScreen];
+  let isFullScreen;
+  return [isCameraMuted, isMicMuted, isFullScreen, isSharingScreen];
 }
 
 /**
@@ -43,6 +45,7 @@ export default function Tray(props) {
   const callObject = useContext(CallObjectContext);
   const [isCameraMuted, setCameraMuted] = useState(false);
   const [isMicMuted, setMicMuted] = useState(false);
+  const [isFullScreen, setFullScreen] = useState(false);
   const [isSharingScreen, setSharingScreen] = useState(false);
   const [displayChat, setChatDisplay] = useState(false);
   const [highlightedChat, setChatHighlight] = useState(false);
@@ -53,6 +56,10 @@ export default function Tray(props) {
 
   function toggleMic() {
     callObject.setLocalAudio(isMicMuted);
+  }
+
+  function toggleFullScreen() {
+    alert("mainak");
   }
 
   function toggleSharingScreen() {
@@ -90,6 +97,7 @@ export default function Tray(props) {
       );
       setCameraMuted(isCameraMuted);
       setMicMuted(isMicMuted);
+      setFullScreen(isFullScreen);
       setSharingScreen(isSharingScreen);
     }
 
@@ -118,6 +126,12 @@ export default function Tray(props) {
         disabled={props.disabled}
         highlighted={isMicMuted}
         onClick={toggleMic}
+      />
+      <TrayButton
+        type={TYPE_SHARE_SCREEN}
+        disabled={props.disabled}
+        highlighted={isFullScreen}
+        onClick={toggleFullScreen}
       />
       {DailyIframe.supportedBrowser().supportsScreenShare && (
         <TrayButton
