@@ -171,8 +171,7 @@ export default function Call() {
                 null /* Avoid showing large tiles to make room for the message */
         } <
         /div> <
-        div className = "small-tiles"
-        id = "mydiv" > { smallTiles } < /div> {
+        div className = "small-tiles" > { smallTiles } < /div> {
             message && ( <
                 CallMessage header = { message.header }
                 detail = { message.detail }
