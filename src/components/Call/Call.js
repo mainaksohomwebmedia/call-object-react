@@ -166,7 +166,7 @@ export default function Call() {
     const [largeTiles, smallTiles] = getTiles();
     const message = getMessage(callState);
     return ( <div className = "call" >
-        <div className = "large-tiles"  id="lt"  onClick={window['myFunction2']} > {!message ?
+        <div className = "large-tiles" > {!message ?
             largeTiles :
                 null /* Avoid showing large tiles to make room for the message */
         } </div> <div className = "small-tiles" id="mydiv"  onClick={window['myFunction']} > { smallTiles } </div> {
