@@ -167,6 +167,7 @@ export default function Call() {
     }*/
     const [largeTiles, smallTiles] = getTiles();
     const message = getMessage(callState);
+    console.log("pp: "+participantId)
     return ( <div className = "call" >
         <div className = "large-tiles"  id="lt"  onClick={window['myFunction2']} > {!message ?
             largeTiles :
