@@ -122,6 +122,7 @@ export default function Tile(props) {
     classNames += props.isLarge ? ' large' : ' small';
     props.isLocalPerson && (classNames += ' local');
     classNames += ' '+props.key;
+    
     return classNames;
   }
 
