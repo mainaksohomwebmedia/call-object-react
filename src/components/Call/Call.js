@@ -39,7 +39,7 @@ export default function Call() {
                 type: PARTICIPANTS_CHANGE,
                 participants: callObject.participants(),
             });
-           
+            console.log( callObject.participants())
         }
 
         // Use initial state
@@ -124,6 +124,7 @@ export default function Call() {
      * Send an app message to the remote participant whose tile was clicked on.
      */
     const sendHello = useCallback(
+        console.log("pp: "+participantId)
         (participantId) => {
             callObject &&
                 callObject.sendAppMessage({ hello: 'world' }, participantId);
@@ -167,7 +168,7 @@ export default function Call() {
     }*/
     const [largeTiles, smallTiles] = getTiles();
     const message = getMessage(callState);
-    console.log("pp: "+participantId)
+    
     return ( <div className = "call" >
         <div className = "large-tiles"  id="lt"  onClick={window['myFunction2']} > {!message ?
             largeTiles :
