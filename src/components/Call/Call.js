@@ -147,6 +147,7 @@ export default function Call() {
                 isLocalPerson = { isLocal(id) }
                 isLarge = { isLarge }
                 disableCornerMessage = { isScreenShare(id) }
+                dataid = { id }
                 onClick = {
                     isLocal(id) ?
                     null :
