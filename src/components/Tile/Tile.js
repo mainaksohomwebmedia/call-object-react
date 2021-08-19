@@ -120,7 +120,7 @@ export default function Tile(props) {
     function getClassNames() {
         let classNames = 'tile';
         classNames += props.isLarge ? ' large' : ' small';
-        props.isLocalPerson && (classNames += ' local k__' + key);
+        props.isLocalPerson && (classNames += ' local k__' + props.key);
         return classNames;
     }
 
