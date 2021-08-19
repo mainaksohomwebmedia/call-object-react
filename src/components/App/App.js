@@ -45,6 +45,7 @@ export default function App() {
    * be done with the call object for a while and you're no longer listening to its
    * events.
    */
+  
   const startJoiningCall = useCallback((url) => {
     const newCallObject = DailyIframe.createCallObject();
     setRoomUrl(url);
