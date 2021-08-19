@@ -25,7 +25,7 @@ async function createRoom() {
   //   mode: 'cors',
   // }),
   //   room = await response.json();
-  //   alert(room.url);
+    alert(newRoomEndpoint);
   //    //return room;
 
   // Comment out the above and uncomment the below, using your own URL
