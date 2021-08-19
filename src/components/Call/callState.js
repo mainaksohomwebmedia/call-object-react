@@ -106,7 +106,7 @@ function shouldIncludeScreenCallItem(participant) {
 
 // True if id corresponds to local participant (*not* their screen share)
 function isLocal(id) {
-  console.log("id:"+id);
+  //console.log("id:"+id);
   return id === 'local';
 }
 

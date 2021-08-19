@@ -136,8 +136,7 @@ export default function Call() {
         //let ccc = callObject.participants();
 
         Object.entries(callState.callItems).forEach(([id, callItem]) => {
-            console.log("callItem: ")
-            console.log(callItem)
+            console.log("id:"+id);
             const isLarge =
                 isScreenShare(id) ||
                 (!isLocal(id) && !containsScreenShare(callState.callItems));
@@ -154,6 +153,9 @@ export default function Call() {
                         () => {
                         sendHello(id);
                     }
+                }
+                onLoad = {
+                    window['yy']
                 }
                 />
             );
