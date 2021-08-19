@@ -133,8 +133,11 @@ export default function Call() {
     function getTiles() {
         let largeTiles = [];
         let smallTiles = [];
+        //let ccc = callObject.participants();
+
         Object.entries(callState.callItems).forEach(([id, callItem]) => {
-            
+            console.log("callItem: ")
+            console.log(callItem)
             const isLarge =
                 isScreenShare(id) ||
                 (!isLocal(id) && !containsScreenShare(callState.callItems));
