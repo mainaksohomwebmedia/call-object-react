@@ -40,15 +40,13 @@
     -->
 </body>
 <script>
+
+    function myFunction() {
+         dragElement(document.getElementById("mydiv"));
+    }
+
     function dragElement(elmnt) {
-      console.log(elmnt.innerHTML);
-        //elmnt.innerHTML = "mainak";
-        //elmnt.style.width = 800 + "px";
-        // elmnt.style.top = 0;
-        // elmnt.style.left = "75%";
-       
-
-
+     
         var pos1 = 0,
             pos2 = 0,
             pos3 = 0,
@@ -91,15 +89,6 @@
             document.onmousemove = null;
         }
      }
-</script>
-<script>
-    /* document.getElementsByClassName("small-tiles").onclick = function() {
-            myFunction()
-        };
-    */
-    function myFunction() {
-         dragElement(document.getElementById("mydiv"));
-    }
 </script>
 
 </html>
