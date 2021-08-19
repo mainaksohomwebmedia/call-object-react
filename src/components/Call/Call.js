@@ -154,9 +154,7 @@ export default function Call() {
                         sendHello(id);
                     }
                 }
-                onLoad = {
-                    window['yy']
-                }
+                
                 />
             );
             if (isLarge) {
