@@ -29,7 +29,7 @@ fetch(url, options)
   .then(res => res.json())
   .then(json => console.log(json))
   .catch(err => console.error('error:' + err));
-  alert(json.url);
+  alert(json.id);
   // const exp = Math.round(Date.now() / 1000) + 60 * 30;
   // const options = {
   //   properties: {
