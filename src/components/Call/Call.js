@@ -39,6 +39,7 @@ export default function Call() {
                 type: PARTICIPANTS_CHANGE,
                 participants: callObject.participants(),
             });
+            console.log(callObject.participants())
         }
 
         // Use initial state
@@ -133,7 +134,7 @@ export default function Call() {
         let largeTiles = [];
         let smallTiles = [];
         Object.entries(callState.callItems).forEach(([id, callItem]) => {
-            console.log("id:"+id)
+            
             const isLarge =
                 isScreenShare(id) ||
                 (!isLocal(id) && !containsScreenShare(callState.callItems));
