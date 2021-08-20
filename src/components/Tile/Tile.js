@@ -134,6 +134,7 @@ export default function Tile(props) {
         }*/
     }
 
+
     return ( <
         div className = { getClassNames() }
         onClick = { props.onClick }
