@@ -127,7 +127,7 @@ export default function Tile(props) {
   }
 
   return (
-    <div className={getClassNames()} onClick={props.onClick} id={props.dataid}>
+    <div className={getClassNames()} onClick={props.onClick} id={props.dataid} onClick={window['myFunction2']} >
       <div className="background" />
       {getOverlayComponent()}
       {getVideoComponent()}
