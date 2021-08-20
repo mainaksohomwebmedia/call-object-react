@@ -137,7 +137,7 @@ export default function Call() {
                 isScreenShare(id) ||
                 (!isLocal(id) && !containsScreenShare(callState.callItems));
             const tile = ( <
-                Tile key = { id }
+                Tile key = { id.user_id }
                 videoTrackState = { callItem.videoTrackState }
                 audioTrackState = { callItem.audioTrackState }
                 isLocalPerson = { isLocal(id) }
