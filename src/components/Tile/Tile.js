@@ -127,11 +127,7 @@ export default function Tile(props) {
   }
 
   function getDataId() {
-    if(props.dataid == "local") {
-      return props.localid.local.user_id;
-    }else {
-      return props.dataid;
-    }
+    return props.dataid;
   }
   
   return (
