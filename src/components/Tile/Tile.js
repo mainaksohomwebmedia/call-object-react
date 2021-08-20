@@ -136,7 +136,3 @@ export default function Tile(props) {
     </div>
   );
 }
-{/* <div class="tile small local undefined">
-  <div class="background"></div>
-  <video autoplay="" playsinline=""></video>
-</div>  */}
