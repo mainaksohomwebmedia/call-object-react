@@ -123,7 +123,7 @@ export default function Tile(props) {
     props.isLocalPerson && (classNames += ' local');
     classNames += ' '+props.dataid;
 
-    return props.userId;
+    return classNames;
   }
 
   return (
