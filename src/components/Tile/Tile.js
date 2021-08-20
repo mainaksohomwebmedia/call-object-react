@@ -116,6 +116,9 @@ export default function Tile(props) {
       )
     );
   }
+  function eve() { 
+      alert("mainak");
+  }
 
   function getClassNames() {
     let classNames = 'tile';
@@ -127,7 +130,7 @@ export default function Tile(props) {
   }
 
   return (
-    <div className={getClassNames()} id={props.dataid} onClick={window['myFunction2']}>
+    <div className={getClassNames()} onClick={eve()} id={props.dataid}>
       <div className="background" />
       {getOverlayComponent()}
       {getVideoComponent()}
