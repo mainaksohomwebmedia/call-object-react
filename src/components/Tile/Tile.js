@@ -121,17 +121,21 @@ export default function Tile(props) {
     let classNames = 'tile';
     classNames += props.isLarge ? ' large' : ' small';
     props.isLocalPerson && (classNames += ' local');
-    classNames += ' '+props.dataid[0].user_id;
+    classNames += ' '+props.dataid;
 
     return classNames;
   }
 
   function getDataId() {
-    return props.dataid[0].user_id;
+    if(props.dataid == "local") {
+      return props.localid.local.user_id;
+    }else {
+      return props.dataid;
+    }
   }
   
   return (
-    <div className={getClassNames()} onClick={props.onClick} id={props.dataid[0].user_id}>
+    <div className={getClassNames()} onClick={props.onClick} id={props.dataid}>
       <div className="background" />
       {getDataId()}
       {getOverlayComponent()}
