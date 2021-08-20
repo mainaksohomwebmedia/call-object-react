@@ -122,17 +122,13 @@ export default function Tile(props) {
     classNames += props.isLarge ? ' large' : ' small';
     props.isLocalPerson && (classNames += ' local');
     classNames += ' '+props.dataid;
-    return props.isLarge;
-    //return classNames;
+
+    return classNames;
   }
 
   return (
     <div className={getClassNames()} onClick={props.onClick} id={props.dataid}>
-      <div className="background" />
-      {getOverlayComponent()}
-      {getVideoComponent()}
-      {getAudioComponent()}
-      {getCornerMessageComponent()}
+      {props.dataid}
     </div>
   );
 }
