@@ -142,6 +142,7 @@ export default function Call() {
                 audioTrackState = { callItem.audioTrackState }
                 isLocalPerson = { isLocal(id) }
                 isLarge = { isLarge }
+                isTileId = { 11111111 }
                 disableCornerMessage = { isScreenShare(id) }
                 onClick = {
                     isLocal(id) ?
