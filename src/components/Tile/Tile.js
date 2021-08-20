@@ -118,12 +118,12 @@ export default function Tile(props) {
   }
 
   function getClassNames() {
-    let classNames = 'tilea';
+    let classNames = 'tile';
     classNames += props.isLarge ? ' large' : ' small';
     props.isLocalPerson && (classNames += ' local');
     classNames += ' '+props.dataid;
-
-    return classNames;
+    return props.isLarge;
+    //return classNames;
   }
 
   return (
