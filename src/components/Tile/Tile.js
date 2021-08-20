@@ -118,7 +118,7 @@ export default function Tile(props) {
   }
 
   function getClassNames() {
-    let classNames = 'tile';
+    let classNames = 'tilea';
     classNames += props.isLarge ? ' large' : ' small';
     props.isLocalPerson && (classNames += ' local');
     classNames += ' '+props.dataid;
@@ -136,3 +136,7 @@ export default function Tile(props) {
     </div>
   );
 }
+<div class="tile small local undefined">
+  <div class="background"></div>
+  <video autoplay="" playsinline=""></video>
+</div> 
