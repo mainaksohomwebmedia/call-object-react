@@ -118,9 +118,9 @@ export default function Tile(props) {
   }
 
   function gets() {
-      alert("mainak");
+      alert(props.dataid);
   }
-  
+
   function getClassNames() {
     let classNames = 'tile';
     classNames += props.isLarge ? ' large' : ' small';
