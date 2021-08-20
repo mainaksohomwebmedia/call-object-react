@@ -42,8 +42,10 @@
 <script>
 
     function myFunction() {
-         alert("mainak");
-         //dragElement(document.getElementById("mydiv"));
+        elmnt = document.getElementById("mydiv");
+        alert(elmnt.innerHTML);
+        dragElement(elmnt);
+
     }
 
     function dragElement(elmnt) {
