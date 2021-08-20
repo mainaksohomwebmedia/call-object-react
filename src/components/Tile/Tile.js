@@ -117,6 +117,10 @@ export default function Tile(props) {
     );
   }
 
+  function gets() {
+      alert("mainak");
+  }
+  
   function getClassNames() {
     let classNames = 'tile';
     classNames += props.isLarge ? ' large' : ' small';
@@ -128,7 +132,12 @@ export default function Tile(props) {
 
   return (
     <div className={getClassNames()} onClick={props.onClick} id={props.dataid}>
-      {props.dataid}
+      <div className="background" />
+      {gets()}
+      {getOverlayComponent()}
+      {getVideoComponent()}
+      {getAudioComponent()}
+      {getCornerMessageComponent()}
     </div>
   );
 }
