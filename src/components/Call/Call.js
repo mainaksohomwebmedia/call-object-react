@@ -132,7 +132,14 @@ export default function Call() {
     function getTiles() {
         let largeTiles = [];
         let smallTiles = [];
+        let participantsdata = callObject.participants();
+        let lobj = participantsdata.local;
+        let localuserid = "";
+        if(lobj){
+            localuserid = lobj.user_id;
+        }
         Object.entries(callState.callItems).forEach(([id, callItem]) => {
+            let ids = (id === "local"?localuserid:id);
             const isLarge =
                 isScreenShare(id) ||
                 (!isLocal(id) && !containsScreenShare(callState.callItems));
@@ -142,8 +149,8 @@ export default function Call() {
                 audioTrackState = { callItem.audioTrackState }
                 isLocalPerson = { isLocal(id) }
                 isLarge = { isLarge }
-                dataid = { id }
-                localid = { callObject.participants() }
+                dataid = { ids }
+                /*localid = { callObject.participants() }*/
                 disableCornerMessage = { isScreenShare(id) }
                 onClick = {
                     isLocal(id) ?
