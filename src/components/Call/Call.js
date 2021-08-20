@@ -141,8 +141,7 @@ export default function Call() {
                 videoTrackState = { callItem.videoTrackState }
                 audioTrackState = { callItem.audioTrackState }
                 isLocalPerson = { isLocal(id) }
-                isLarge = { isLarge }
-                isTileId = { id }
+                userId = { callItem.user_id }
                 disableCornerMessage = { isScreenShare(id) }
                 onClick = {
                     isLocal(id) ?
