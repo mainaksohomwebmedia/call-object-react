@@ -126,9 +126,18 @@ export default function Tile(props) {
     return classNames;
   }
 
+  function getDataId() {
+    return (
+            <>
+              <h5>mainak</h5>  
+            </>
+    );
+  }
+  
   return (
     <div className={getClassNames()} onClick={props.onClick} id={props.dataid}>
       <div className="background" />
+      {getDataId()}
       {getOverlayComponent()}
       {getVideoComponent()}
       {getAudioComponent()}
