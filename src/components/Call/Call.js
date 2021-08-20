@@ -23,7 +23,7 @@ export default function Call() {
 
     /**
      * Start listening for participant changes, when the callObject is set.
-     */
+    */
     useEffect(() => {
         if (!callObject) return;
 
