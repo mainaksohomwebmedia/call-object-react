@@ -23,7 +23,7 @@ export default function Call() {
 
     /**
      * Start listening for participant changes, when the callObject is set.
-    */
+     */
     useEffect(() => {
         if (!callObject) return;
 
@@ -39,7 +39,6 @@ export default function Call() {
                 type: PARTICIPANTS_CHANGE,
                 participants: callObject.participants(),
             });
-            console.log(callObject.participants())
         }
 
         // Use initial state
@@ -133,10 +132,7 @@ export default function Call() {
     function getTiles() {
         let largeTiles = [];
         let smallTiles = [];
-        //let ccc = callObject.participants();
-
         Object.entries(callState.callItems).forEach(([id, callItem]) => {
-            console.log("id:"+id);
             const isLarge =
                 isScreenShare(id) ||
                 (!isLocal(id) && !containsScreenShare(callState.callItems));
@@ -147,7 +143,6 @@ export default function Call() {
                 isLocalPerson = { isLocal(id) }
                 isLarge = { isLarge }
                 disableCornerMessage = { isScreenShare(id) }
-                dataid = { id }
                 onClick = {
                     isLocal(id) ?
                     null :
@@ -155,7 +150,6 @@ export default function Call() {
                         sendHello(id);
                     }
                 }
-                
                 />
             );
             if (isLarge) {
