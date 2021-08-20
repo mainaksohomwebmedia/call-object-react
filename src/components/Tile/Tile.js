@@ -127,7 +127,7 @@ export default function Tile(props) {
   }
 
   function getDataId() {
-    return "mainak";
+    return props.dataid;
   }
   
   return (
