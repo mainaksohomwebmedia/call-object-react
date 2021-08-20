@@ -118,7 +118,7 @@ export default function Tile(props) {
   }
 
   function gets() {
-      alert(props.dataid);
+      alert(props.isLarge);
   }
 
   function getClassNames() {
