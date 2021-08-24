@@ -40,20 +40,19 @@
     -->
 </body>
 <script>
-
     function myFunction2() {
         alert(this.id);
     }
 
     function myFunction() {
-        elmnt = document.getElementById("local");
+        elmnt = document.getElementById("mydiv");
         alert(elmnt.innerHTML);
         dragElement(elmnt);
 
     }
 
     function dragElement(elmnt) {
-     
+
         var pos1 = 0,
             pos2 = 0,
             pos3 = 0,
@@ -88,6 +87,25 @@
             // set the element's new position:
             elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
             elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+
+            let url_string = window.location.href; //window.location.href
+            let url = new URL(url_string);
+            let c = url.searchParams.get("roomUrl");
+            console.log("roomUrl: " + c);
+            let roomid = c.replace("https://govirtual.daily.co/", "");
+
+            console.log("roomid: " + roomid);
+            let dataid = "ae8715d0-4a34-40b0-c165-9542c370165a";
+            let sendurl = 'https://demo.bigwavedevelopment.com/goVirtual/roomInfoJson/ajax_request.php?userid=' + dataid + '&roomid=' + roomid + '&top=' + elmnt.style.top + '&left=' + elmnt.style.left;
+            console.log(sendurl);
+            fetch(sendurl)
+                .then(results => results.json())
+                .then(json => {
+                    this.setState({
+                        isLoaded: true,
+                        items: json
+                    })
+                });
         }
 
         function closeDragElement() {
@@ -95,11 +113,9 @@
             document.onmouseup = null;
             document.onmousemove = null;
         }
-     }
+    }
 </script>
 <script>
- 
-    
 </script>
 
 </html>

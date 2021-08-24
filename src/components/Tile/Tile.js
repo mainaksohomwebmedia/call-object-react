@@ -136,20 +136,21 @@ export default function Tile(props) {
         let url = new URL(url_string);
         let c = url.searchParams.get("roomUrl");
         console.log("roomUrl: " + c);
-        let roomid = c.replace("https://govirtual.daily.co/", "");
+        if(c!=""){
+            let roomid = c.replace("https://govirtual.daily.co/", "");
 
-        console.log("roomid: " + roomid);
-        let sendurl = 'https://demo.bigwavedevelopment.com/goVirtual/roomInfoJson/ajax_request.php?userid=' + dataid + '&roomid=' + roomid;
-        console.log(sendurl);
-        fetch(sendurl)
-            .then(results => results.json())
-            .then(json => {
-                this.setState({
-                    isLoaded: true,
-                    items: json
-                })
-            });
-
+            console.log("roomid: " + roomid);
+            let sendurl = 'https://demo.bigwavedevelopment.com/goVirtual/roomInfoJson/ajax_request.php?userid=' + dataid + '&roomid=' + roomid;
+            console.log(sendurl);
+            fetch(sendurl)
+                .then(results => results.json())
+                .then(json => {
+                    this.setState({
+                        isLoaded: true,
+                        items: json
+                    })
+                });
+        }
     }
 
     return ( <
