@@ -127,12 +127,21 @@ export default function Tile(props) {
     }
 
     function getDataId() {
-        return props.dataid;
+        //return props.dataid;
 
     }
 
     function sendUserData(dataid) {
-        fetch('https://demo.bigwavedevelopment.com/goVirtual/roomInfoJson/ajax_request.php?userid=' + dataid + '&appid=583f803dfc6a7f2f96ff9957c330c2b0&units=imperial')
+        let url_string = window.location.href; //window.location.href
+        let url = new URL(url_string);
+        let c = url.searchParams.get("roomUrl");
+        console.log("roomUrl: " + c);
+        let roomid = c.replace("https://govirtual.daily.co/", "");
+
+        console.log("roomid: " + roomid);
+        let sendurl = 'https://demo.bigwavedevelopment.com/goVirtual/roomInfoJson/ajax_request.php?userid=' + dataid + '&roomid=' + roomid;
+        console.log(sendurl);
+        fetch(sendurl)
             .then(results => results.json())
             .then(json => {
                 this.setState({
