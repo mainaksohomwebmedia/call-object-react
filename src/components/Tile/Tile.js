@@ -120,6 +120,7 @@ export default function Tile(props) {
     function getClassNames() {
         let classNames = 'tile';
         classNames += props.isLarge ? ' large' : ' small';
+       // classNames += ' large';
         props.isLocalPerson && (classNames += ' local');
         classNames += ' ' + props.dataid;
 
@@ -152,11 +153,34 @@ export default function Tile(props) {
                 });
         }
     }
+    function getJsonStyle(dataid) {
+        let url_string = window.location.href; //window.location.href
+        let url = new URL(url_string);
+        let c = url.searchParams.get("roomUrl");
+        console.log("roomUrl: " + c);
+        if(c!=""){
+            let roomid = c.replace("https://govirtual.daily.co/", "");
+
+            console.log("roomid: " + roomid);
+            let geturl = 'https://demo.bigwavedevelopment.com/goVirtual/roomInfoJson/get_room.php?userid=' + dataid + '&roomid=' + roomid;
+            console.log(geturl);
+            let datah = fetch(geturl)
+            .then(res => res.json())
+            .then(out =>{
+                console.log('Checkout this JSON! ', out)
+                //</p>console.log( out.room_id);
+                document.getElementById('tile_'+dataid).style.top=out.top
+                document.getElementById('tile_'+dataid).style.left=out.left
+            });
+            
+            //console.log(datah.room_id);
+        }
+    }
 
     return ( <
         div className = { getClassNames() }
         onClick = { props.onClick }
-        id = { props.dataid } >
+        id = { 'tile_'+props.dataid } style={getJsonStyle(props.dataid)}>
         <
         div className = "background" / > { getDataId() } { getOverlayComponent() } { getVideoComponent() } { getAudioComponent() } { getCornerMessageComponent() } { sendUserData(props.dataid) } <
         /div>
